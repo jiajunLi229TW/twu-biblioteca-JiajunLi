@@ -16,7 +16,7 @@ public class ExampleTest {
     @Test
     public void showBooks() {
         customer customer = new customer();
-        assertThat(customer.enterLibrary(), is("book of the library is book1, book2, book3"));
+        assertThat(customer.findListOfbooks(), is("book of the library is book1, book2, book3"));
     }
 }
 
