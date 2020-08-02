@@ -8,4 +8,12 @@ public class customer {
     public String findListOfbooks() {
         return BibliotecaApp.getInventory();
     }
+
+    public Object findListOfbookAuthor() {
+        return BibliotecaApp.getListOfAuthor();
+    }
+
+    public Object findListOfbookPublishedYear() {
+        return BibliotecaApp.getListOfPublishedYear();
+    }
 }

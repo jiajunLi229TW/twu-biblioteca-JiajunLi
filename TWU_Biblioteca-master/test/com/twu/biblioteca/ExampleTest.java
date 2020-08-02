@@ -18,5 +18,17 @@ public class ExampleTest {
         customer customer = new customer();
         assertThat(customer.findListOfbooks(), is("book of the library is book1, book2, book3"));
     }
+
+    @Test
+    public void showBookAuthor() {
+        customer customer = new customer();
+        System.out.println(customer.findListOfbookAuthor());
+    }
+
+    @Test
+    public void showBookPublishedYear() {
+        customer customer = new customer();
+        System.out.println(customer.findListOfbookPublishedYear());
+    }
 }
 
