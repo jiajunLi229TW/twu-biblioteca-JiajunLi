@@ -12,4 +12,11 @@ public class ExampleTest {
         customer customer = new customer();
         assertThat(customer.enterLibrary(), is("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!"));
     }
+
+    @Test
+    public void showBooks() {
+        customer customer = new customer();
+        assertThat(customer.enterLibrary(), is("book of the library is book1, book2, book3"));
+    }
 }
+
