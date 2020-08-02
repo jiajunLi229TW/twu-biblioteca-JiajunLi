@@ -6,29 +6,26 @@ import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 
 public class ExampleTest {
+    static customer customer = new customer();
 
     @Test
     public void viewWelcomeMessage() {
-        customer customer = new customer();
         assertThat(customer.enterLibrary(), is("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!"));
     }
 
     @Test
     public void showBooks() {
-        customer customer = new customer();
         assertThat(customer.findListOfbooks(), is("book of the library is book1, book2, book3"));
     }
 
     @Test
     public void showBookAuthor() {
-        customer customer = new customer();
-        System.out.println(customer.findListOfbookAuthor());
+        assertThat(customer.findListOfbookAuthor(), is("A, B, C"));
     }
 
     @Test
     public void showBookPublishedYear() {
-        customer customer = new customer();
-        System.out.println(customer.findListOfbookPublishedYear());
+        assertThat(customer.findListOfbookPublishedYear(), is("2021, 2022, 2023"));
     }
 }
 
