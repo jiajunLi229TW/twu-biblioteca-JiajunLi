@@ -38,5 +38,19 @@ public class ExampleTest {
         System.setIn(in);
         assertThat(customer.findMainMenuOfOptions(), is("book of the library is book1, book2, book3"));
     }
+
+    @Test
+    public void showMenuOfOptionsForAuthor() {
+        ByteArrayInputStream in = new ByteArrayInputStream("Show list of author".getBytes());
+        System.setIn(in);
+        assertThat(customer.findMainMenuOfOptions(), is("A, B, C"));
+    }
+
+    @Test
+    public void showMenuOfOptionsForPublishedYear() {
+        ByteArrayInputStream in = new ByteArrayInputStream("show list of published year".getBytes());
+        System.setIn(in);
+        assertThat(customer.findMainMenuOfOptions(), is("2021, 2022, 2023"));
+    }
 }
 
