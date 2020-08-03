@@ -11,8 +11,8 @@ public class BibliotecaApp {
     static book book2 = new book("book2", "B", 2022);
     static book book3 = new book("book3", "C", 2023);
 
-    static List<book> inventory = Arrays.asList(book1, book2, book3);
-
+    //static List<book> inventory = Arrays.asList(book1, book2, book3);
+    static List<book> inventory = new java.util.ArrayList<>(java.util.Arrays.asList(book1, book2, book3));
     public static String showWelcomeMessage() {
         return "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
     }

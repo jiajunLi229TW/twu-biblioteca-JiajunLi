@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 
+import static com.twu.biblioteca.BibliotecaApp.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 
@@ -57,11 +58,16 @@ public class ExampleTest {
     public void InvalidInputTest() {
         ByteArrayInputStream in = new ByteArrayInputStream("5".getBytes());
         System.setIn(in);
-        System.out.println(customer.findMainMenuOfOptions());
-
+        assertThat(customer.findMainMenuOfOptions(), is("your input should be integer within 1 to 4"));
         ByteArrayInputStream in2 = new ByteArrayInputStream("1".getBytes());
         System.setIn(in2);
-        System.out.println(customer.findMainMenuOfOptions());
+        assertThat(customer.findMainMenuOfOptions(), is("book of the library is book1, book2, book3"));
+    }
+
+    @Test
+    public void checkedBooksByLibrarian() {
+        Librarian.checkOut(book1);
+        assertThat(customer.findListOfbooks(), is("book of the library is book2, book3"));
     }
 }
 
