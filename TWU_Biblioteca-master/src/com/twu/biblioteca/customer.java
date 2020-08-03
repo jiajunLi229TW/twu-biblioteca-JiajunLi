@@ -16,4 +16,7 @@ public class customer {
     public Object findListOfbookPublishedYear() {
         return BibliotecaApp.getListOfPublishedYear();
     }
+
+    public Object findMainMenuOfOptions() { return BibliotecaApp.getOptions();
+    }
 }

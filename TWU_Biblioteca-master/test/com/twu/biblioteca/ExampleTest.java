@@ -29,3 +29,9 @@ public class ExampleTest {
     }
 }
 
+    @Test
+    public void showMenuOfOptions() {
+        assertThat(customer.findMainMenuOfOptions(), is("book of the library is book1, book2, book3"));
+    }
+}
+

@@ -49,4 +49,8 @@ public class BibliotecaApp {
 
         return String.join(", ", yearList);
     }
+
+    public static Object getOptions() {
+
+    }
 }
