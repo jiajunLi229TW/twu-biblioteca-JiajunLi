@@ -54,18 +54,23 @@ public class BibliotecaApp {
         System.out.println("please enter following orders for different options" +
                 "\n1. Show list of books" +
                 "\n2. Show list of author" +
-                "\n3. show list of published year");
+                "\n3. show list of published year" +
+                "\n4. exit");
         Scanner keyboard = new Scanner(System.in);
         String input = keyboard.nextLine();
         switch (input) {
-            case "Show list of books":
+            case "1":
                 return getInventory();
-            case "Show list of author":
+            case "2":
                 return getListOfAuthor();
-            case "show list of published year":
+            case "3":
                 return getListOfPublishedYear();
+            case "4":
+                break;
+            default:
+                return "please select a valid option";
 
         }
-        return "please select a vaild option";
+        return "please select a valid option";
     }
 }

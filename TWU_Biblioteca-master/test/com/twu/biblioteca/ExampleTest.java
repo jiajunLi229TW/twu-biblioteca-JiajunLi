@@ -34,23 +34,30 @@ public class ExampleTest {
 
     @Test
     public void showMenuOfOptions() {
-        ByteArrayInputStream in = new ByteArrayInputStream("Show list of books".getBytes());
+        ByteArrayInputStream in = new ByteArrayInputStream("1".getBytes());
         System.setIn(in);
         assertThat(customer.findMainMenuOfOptions(), is("book of the library is book1, book2, book3"));
     }
 
     @Test
     public void showMenuOfOptionsForAuthor() {
-        ByteArrayInputStream in = new ByteArrayInputStream("Show list of author".getBytes());
+        ByteArrayInputStream in = new ByteArrayInputStream("2".getBytes());
         System.setIn(in);
         assertThat(customer.findMainMenuOfOptions(), is("A, B, C"));
     }
 
     @Test
     public void showMenuOfOptionsForPublishedYear() {
-        ByteArrayInputStream in = new ByteArrayInputStream("show list of published year".getBytes());
+        ByteArrayInputStream in = new ByteArrayInputStream("3".getBytes());
         System.setIn(in);
         assertThat(customer.findMainMenuOfOptions(), is("2021, 2022, 2023"));
+    }
+
+    @Test
+    public void switchLoopTest() {
+        ByteArrayInputStream in = new ByteArrayInputStream("4".getBytes());
+        System.setIn(in);
+        System.out.println(customer.findMainMenuOfOptions());
     }
 }
 
