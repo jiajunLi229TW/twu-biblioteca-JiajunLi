@@ -54,9 +54,13 @@ public class ExampleTest {
     }
 
     @Test
-    public void switchLoopTest() {
-        ByteArrayInputStream in = new ByteArrayInputStream("4".getBytes());
+    public void InvalidInputTest() {
+        ByteArrayInputStream in = new ByteArrayInputStream("5".getBytes());
         System.setIn(in);
+        System.out.println(customer.findMainMenuOfOptions());
+
+        ByteArrayInputStream in2 = new ByteArrayInputStream("1".getBytes());
+        System.setIn(in2);
         System.out.println(customer.findMainMenuOfOptions());
     }
 }

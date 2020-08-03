@@ -51,13 +51,16 @@ public class BibliotecaApp {
     }
 
     public static String getOptions() {
-        System.out.println("please enter following orders for different options" +
+        System.out.println("please enter following numbers for different options" +
                 "\n1. Show list of books" +
                 "\n2. Show list of author" +
                 "\n3. show list of published year" +
                 "\n4. exit");
         Scanner keyboard = new Scanner(System.in);
         String input = keyboard.nextLine();
+//       if (Integer.parseInt(input) > 4 || Integer.parseInt(input) < 1) {
+//           return "your input should be integer within 1 to 4";
+//       }
         switch (input) {
             case "1":
                 return getInventory();
@@ -68,9 +71,9 @@ public class BibliotecaApp {
             case "4":
                 break;
             default:
-                return "please select a valid option";
-
+                return "your input should be integer within 1 to 4";
         }
-        return "please select a valid option";
+
+        return null;
     }
 }
