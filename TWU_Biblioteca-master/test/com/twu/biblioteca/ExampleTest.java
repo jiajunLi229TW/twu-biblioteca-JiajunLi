@@ -2,6 +2,9 @@ package com.twu.biblioteca;
 
 
 import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 
@@ -27,10 +30,12 @@ public class ExampleTest {
     public void showBookPublishedYear() {
         assertThat(customer.findListOfbookPublishedYear(), is("2021, 2022, 2023"));
     }
-}
+
 
     @Test
     public void showMenuOfOptions() {
+        ByteArrayInputStream in = new ByteArrayInputStream("Show list of books".getBytes());
+        System.setIn(in);
         assertThat(customer.findMainMenuOfOptions(), is("book of the library is book1, book2, book3"));
     }
 }
