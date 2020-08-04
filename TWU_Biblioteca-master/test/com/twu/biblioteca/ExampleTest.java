@@ -25,6 +25,7 @@ public class ExampleTest {
     @Test
     public void showBookAuthor() {
         assertThat(customer.findListOfbookAuthor(), is("A, B, C"));
+        assertThat(customer.findListOfbookAuthor(), is("A, B, C"));
     }
 
     @Test
@@ -56,11 +57,11 @@ public class ExampleTest {
 
     @Test
     public void InvalidInputTest() {
-        ByteArrayInputStream in = new ByteArrayInputStream("5".getBytes());
-        System.setIn(in);
-        assertThat(customer.findMainMenuOfOptions(), is("your input should be integer within 1 to 4"));
-        ByteArrayInputStream in2 = new ByteArrayInputStream("1".getBytes());
-        System.setIn(in2);
+        ByteArrayInputStream firstUserInput = new ByteArrayInputStream("7".getBytes());
+        System.setIn(firstUserInput);
+        assertThat(customer.findMainMenuOfOptions(), is("your input should be integer within 1 to 6"));
+        ByteArrayInputStream secondUserInput = new ByteArrayInputStream("1".getBytes());
+        System.setIn(secondUserInput);
         assertThat(customer.findMainMenuOfOptions(), is("book of the library is book1, book2, book3"));
     }
 
@@ -72,22 +73,22 @@ public class ExampleTest {
 
     @Test
     public void checkedBooksByCustomer() {
-        ByteArrayInputStream in = new ByteArrayInputStream("book1".getBytes());
-        System.setIn(in);
+        ByteArrayInputStream firstUserInput = new ByteArrayInputStream("book1".getBytes());
+        System.setIn(firstUserInput);
         assertThat(customer.checkOut(), is("Thank you! Enjoy the book"));
 
-        ByteArrayInputStream in2 = new ByteArrayInputStream("book4".getBytes());
-        System.setIn(in2);
+        ByteArrayInputStream secondUserInput = new ByteArrayInputStream("book4".getBytes());
+        System.setIn(secondUserInput);
         assertThat(customer.checkOut(), is("Sorry, that book is not available"));
     }
 
     @Test
     public void returnBooksByCustomer() {
-        ByteArrayInputStream in = new ByteArrayInputStream("book1".getBytes());
-        System.setIn(in);
+        ByteArrayInputStream firstUserInput = new ByteArrayInputStream("book1".getBytes());
+        System.setIn(firstUserInput);
         assertThat(customer.checkIn(), is("Thank you for returning the book"));
-        ByteArrayInputStream in2 = new ByteArrayInputStream("book4".getBytes());
-        System.setIn(in2);
+        ByteArrayInputStream secondUserInput = new ByteArrayInputStream("book4".getBytes());
+        System.setIn(secondUserInput);
         assertThat(customer.checkIn(), is("That is not a valid book to return"));
     }
 }

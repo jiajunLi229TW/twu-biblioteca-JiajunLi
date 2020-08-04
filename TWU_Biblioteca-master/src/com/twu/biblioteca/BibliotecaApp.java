@@ -89,7 +89,7 @@ public class BibliotecaApp {
             case "6":
                 break;
             default:
-                return "your input should be integer within 1 to 4";
+                return "your input should be integer within 1 to 6";
         }
 
         return null;
