@@ -81,7 +81,7 @@ public class BibliotecaApp {
             case "3":
                 return getListOfPublishedYear();
             case "4":
-                return null;
+                return checkOut();
             case "5":
                 break;
             default:
