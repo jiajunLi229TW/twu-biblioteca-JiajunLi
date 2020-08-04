@@ -72,8 +72,13 @@ public class ExampleTest {
 
     @Test
     public void checkedBooksByCustomer() {
-        customer.checkOut(book1);
-        assertThat(customer.findListOfbooks(), is("book of the library is book2, book3"));
+        ByteArrayInputStream in = new ByteArrayInputStream("book1".getBytes());
+        System.setIn(in);
+        assertThat(customer.checkOut(), is("check out successful"));
+
+        ByteArrayInputStream in2 = new ByteArrayInputStream("book4".getBytes());
+        System.setIn(in2);
+        assertThat(customer.checkOut(), is("the book selected is out of stock"));
     }
 }
 

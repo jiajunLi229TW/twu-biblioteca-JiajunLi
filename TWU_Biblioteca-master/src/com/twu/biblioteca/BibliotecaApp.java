@@ -55,7 +55,8 @@ public class BibliotecaApp {
                 "\n1. Show list of books" +
                 "\n2. Show list of author" +
                 "\n3. show list of published year" +
-                "\n4. exit");
+                "\n4. check out a book" +
+                "\n5. exit");
         Scanner keyboard = new Scanner(System.in);
         String input = keyboard.nextLine();
 //       if (Integer.parseInt(input) > 4 || Integer.parseInt(input) < 1) {
@@ -69,6 +70,8 @@ public class BibliotecaApp {
             case "3":
                 return getListOfPublishedYear();
             case "4":
+                break;
+            case "5":
                 break;
             default:
                 return "your input should be integer within 1 to 4";
