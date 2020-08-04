@@ -17,7 +17,7 @@ public class book {
 
     public String getName() { return name; }
 
-    public int getpublishedYear() {
+    public int getPublishedYear() {
         return publishedYear;
     }
 }

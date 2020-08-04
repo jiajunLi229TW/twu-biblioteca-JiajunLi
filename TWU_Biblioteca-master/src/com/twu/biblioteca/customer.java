@@ -5,27 +5,21 @@ public class customer {
         return BibliotecaApp.showWelcomeMessage();
     }
 
-    public String findListOfbooks() {
+    public String findListOfBooks() {
         return BibliotecaApp.getInventory();
     }
 
-    public Object findListOfbookAuthor() {
+    public Object findListOfBookAuthor() {
         return BibliotecaApp.getListOfAuthor();
     }
 
-    public Object findListOfbookPublishedYear() {
+    public Object findListOfBookPublishedYear() {
         return BibliotecaApp.getListOfPublishedYear();
     }
 
-    public Object findMainMenuOfOptions() {
-        return BibliotecaApp.getOptions();
-    }
+    public Object findMainMenuOfOptions() { return BibliotecaApp.getOptions(); }
 
-    public String checkOut() {
-        return BibliotecaApp.checkOut();
-    }
+    public String checkOut() { return BibliotecaApp.checkOut(); }
 
-    public String checkIn() {
-        return BibliotecaApp.checkIn();
-    }
+    public String checkIn() { return BibliotecaApp.checkIn(); }
 }

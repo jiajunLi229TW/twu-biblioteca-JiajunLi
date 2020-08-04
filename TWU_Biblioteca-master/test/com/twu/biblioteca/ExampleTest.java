@@ -19,18 +19,18 @@ public class ExampleTest {
 
     @Test
     public void showBooks() {
-        assertThat(customer.findListOfbooks(), is("book of the library is book1, book2, book3"));
+        assertThat(customer.findListOfBooks(), is("book of the library is book1, book2, book3"));
     }
 
     @Test
     public void showBookAuthor() {
-        assertThat(customer.findListOfbookAuthor(), is("A, B, C"));
-        assertThat(customer.findListOfbookAuthor(), is("A, B, C"));
+        assertThat(customer.findListOfBookAuthor(), is("A, B, C"));
+        assertThat(customer.findListOfBookAuthor(), is("A, B, C"));
     }
 
     @Test
     public void showBookPublishedYear() {
-        assertThat(customer.findListOfbookPublishedYear(), is("2021, 2022, 2023"));
+        assertThat(customer.findListOfBookPublishedYear(), is("2021, 2022, 2023"));
     }
 
 
@@ -68,7 +68,7 @@ public class ExampleTest {
     @Test
     public void checkedBooksByLibrarian() {
         Librarian.checkOut(book1);
-        assertThat(customer.findListOfbooks(), is("book of the library is book2, book3"));
+        assertThat(customer.findListOfBooks(), is("book of the library is book2, book3"));
     }
 
     @Test

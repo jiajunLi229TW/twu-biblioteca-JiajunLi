@@ -44,7 +44,7 @@ public class BibliotecaApp {
         List<String> yearList = new ArrayList<>();
 
         for (book book : inventory) {
-            yearList.add(Integer.toString(book.getpublishedYear()));
+            yearList.add(Integer.toString(book.getPublishedYear()));
         }
 
         return String.join(", ", yearList);
