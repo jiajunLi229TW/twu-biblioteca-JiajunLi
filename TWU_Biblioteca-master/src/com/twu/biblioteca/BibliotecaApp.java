@@ -69,7 +69,8 @@ public class BibliotecaApp {
                 "\n2. Show list of author" +
                 "\n3. show list of published year" +
                 "\n4. check out a book" +
-                "\n5. exit");
+                "\n5. return a book" +
+                "\n6. exit");
         Scanner keyboard = new Scanner(System.in);
         String input = keyboard.nextLine();
 
@@ -84,6 +85,8 @@ public class BibliotecaApp {
             case "4":
                 return checkOut();
             case "5":
+                return checkIn();
+            case "6":
                 break;
             default:
                 return "your input should be integer within 1 to 4";
