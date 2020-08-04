@@ -71,6 +71,7 @@ public class BibliotecaApp {
                 "\n4. check out a book" +
                 "\n5. return a book" +
                 "\n6. exit");
+
         Scanner keyboard = new Scanner(System.in);
         String input = keyboard.nextLine();
 

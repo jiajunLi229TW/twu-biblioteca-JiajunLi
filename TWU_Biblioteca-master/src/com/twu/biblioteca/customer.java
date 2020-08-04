@@ -9,15 +9,15 @@ public class customer {
         return BibliotecaApp.getInventory();
     }
 
-    public Object findListOfBookAuthor() {
+    public String findListOfBookAuthor() {
         return BibliotecaApp.getListOfAuthor();
     }
 
-    public Object findListOfBookPublishedYear() {
+    public String findListOfBookPublishedYear() {
         return BibliotecaApp.getListOfPublishedYear();
     }
 
-    public Object findMainMenuOfOptions() { return BibliotecaApp.getOptions(); }
+    public String findMainMenuOfOptions() { return BibliotecaApp.getOptions(); }
 
     public String checkOut() { return BibliotecaApp.checkOut(); }
 
