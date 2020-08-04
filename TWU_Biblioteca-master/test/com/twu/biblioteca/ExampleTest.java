@@ -69,5 +69,11 @@ public class ExampleTest {
         Librarian.checkOut(book1);
         assertThat(customer.findListOfbooks(), is("book of the library is book2, book3"));
     }
+
+    @Test
+    public void checkedBooksByCustomer() {
+        customer.checkOut(book1);
+        assertThat(customer.findListOfbooks(), is("book of the library is book2, book3"));
+    }
 }
 

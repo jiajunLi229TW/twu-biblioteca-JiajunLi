@@ -19,4 +19,9 @@ public class customer {
 
     public Object findMainMenuOfOptions() { return BibliotecaApp.getOptions();
     }
+
+    public void checkOut(book bookSelectedByCustomer) {
+        Librarian.checkOut(bookSelectedByCustomer);
+
+    }
 }
