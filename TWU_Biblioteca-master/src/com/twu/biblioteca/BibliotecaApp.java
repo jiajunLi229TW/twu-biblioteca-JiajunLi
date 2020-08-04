@@ -49,8 +49,20 @@ public class BibliotecaApp {
 
         return String.join(", ", yearList);
     }
+    public static String checkOut() {
+        System.out.println("please enter book name to check out");
+        Scanner keyboard = new Scanner(System.in);
+        String input = keyboard.nextLine();
+        for (book book : inventory) {
+            if (input.equals(book.getName())) {
+                Librarian.checkOut(book);
+                return "check out successful";
+            }
+        }
+        return "the book selected is out of stock";
+    }
 
-    public static String getOptions() {
+        public static String getOptions() {
         System.out.println("please enter following numbers for different options" +
                 "\n1. Show list of books" +
                 "\n2. Show list of author" +
@@ -59,9 +71,8 @@ public class BibliotecaApp {
                 "\n5. exit");
         Scanner keyboard = new Scanner(System.in);
         String input = keyboard.nextLine();
-//       if (Integer.parseInt(input) > 4 || Integer.parseInt(input) < 1) {
-//           return "your input should be integer within 1 to 4";
-//       }
+
+
         switch (input) {
             case "1":
                 return getInventory();
@@ -70,7 +81,7 @@ public class BibliotecaApp {
             case "3":
                 return getListOfPublishedYear();
             case "4":
-                break;
+                return null;
             case "5":
                 break;
             default:
