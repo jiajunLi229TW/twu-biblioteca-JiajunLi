@@ -80,5 +80,15 @@ public class ExampleTest {
         System.setIn(in2);
         assertThat(customer.checkOut(), is("Sorry, that book is not available"));
     }
+
+    @Test
+    public void returnBooksByCustomer() {
+        ByteArrayInputStream in = new ByteArrayInputStream("book1".getBytes());
+        System.setIn(in);
+        assertThat(customer.checkIn(), is("Thank you for returning the book"));
+        ByteArrayInputStream in2 = new ByteArrayInputStream("book4".getBytes());
+        System.setIn(in2);
+        assertThat(customer.checkIn(), is("That is not a valid book to return"));
+    }
 }
 

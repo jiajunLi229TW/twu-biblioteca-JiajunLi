@@ -25,4 +25,6 @@ public class customer {
     }
 
     public String checkOut() { return BibliotecaApp.checkOut();}
+
+    public String checkIn() { return BibliotecaApp.checkIn();}
 }

@@ -11,8 +11,9 @@ public class BibliotecaApp {
     static book book2 = new book("book2", "B", 2022);
     static book book3 = new book("book3", "C", 2023);
 
-    //static List<book> inventory = Arrays.asList(book1, book2, book3);
+    static List<book> inventoryForCheck = new java.util.ArrayList<>(java.util.Arrays.asList(book1, book2, book3));
     static List<book> inventory = new java.util.ArrayList<>(java.util.Arrays.asList(book1, book2, book3));
+
     public static String showWelcomeMessage() {
         return "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
     }
@@ -89,5 +90,19 @@ public class BibliotecaApp {
         }
 
         return null;
+    }
+
+    public static String checkIn() {
+        System.out.println("please enter book name to return");
+        Scanner keyboard = new Scanner(System.in);
+        String input = keyboard.nextLine();
+        for (book book: inventoryForCheck) {
+            if (input.equals(book.getName())) {
+                inventory.add(book);
+                return "Thank you for returning the book";
+            }
+
+        }
+        return "That is not a valid book to return";
     }
 }
