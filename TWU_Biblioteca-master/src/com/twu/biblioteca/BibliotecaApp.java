@@ -56,10 +56,10 @@ public class BibliotecaApp {
         for (book book : inventory) {
             if (input.equals(book.getName())) {
                 Librarian.checkOut(book);
-                return "check out successful";
+                return "Thank you! Enjoy the book";
             }
         }
-        return "the book selected is out of stock";
+        return "Sorry, that book is not available";
     }
 
         public static String getOptions() {

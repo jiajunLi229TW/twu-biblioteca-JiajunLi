@@ -74,11 +74,11 @@ public class ExampleTest {
     public void checkedBooksByCustomer() {
         ByteArrayInputStream in = new ByteArrayInputStream("book1".getBytes());
         System.setIn(in);
-        assertThat(customer.checkOut(), is("check out successful"));
+        assertThat(customer.checkOut(), is("Thank you! Enjoy the book"));
 
         ByteArrayInputStream in2 = new ByteArrayInputStream("book4".getBytes());
         System.setIn(in2);
-        assertThat(customer.checkOut(), is("the book selected is out of stock"));
+        assertThat(customer.checkOut(), is("Sorry, that book is not available"));
     }
 }
 
