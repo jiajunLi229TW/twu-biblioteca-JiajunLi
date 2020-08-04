@@ -5,19 +5,17 @@ public class book {
     private final String author;
     private final int publishedYear;
 
-    public book (String name, String author, int publishedYear) {
+    public book(String name, String author, int publishedYear) {
         this.name = name;
         this.author = author;
-        this. publishedYear = publishedYear;
+        this.publishedYear = publishedYear;
     }
 
     public String getAuthor() {
         return author;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public int getpublishedYear() {
         return publishedYear;

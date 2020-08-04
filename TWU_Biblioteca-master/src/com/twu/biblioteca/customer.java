@@ -1,12 +1,8 @@
 package com.twu.biblioteca;
 
-import java.util.Scanner;
-
-import static com.twu.biblioteca.BibliotecaApp.*;
-
 public class customer {
     public String enterLibrary() {
-         return BibliotecaApp.showWelcomeMessage();
+        return BibliotecaApp.showWelcomeMessage();
     }
 
     public String findListOfbooks() {
@@ -21,10 +17,15 @@ public class customer {
         return BibliotecaApp.getListOfPublishedYear();
     }
 
-    public Object findMainMenuOfOptions() { return BibliotecaApp.getOptions();
+    public Object findMainMenuOfOptions() {
+        return BibliotecaApp.getOptions();
     }
 
-    public String checkOut() { return BibliotecaApp.checkOut();}
+    public String checkOut() {
+        return BibliotecaApp.checkOut();
+    }
 
-    public String checkIn() { return BibliotecaApp.checkIn();}
+    public String checkIn() {
+        return BibliotecaApp.checkIn();
+    }
 }

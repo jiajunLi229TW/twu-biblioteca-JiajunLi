@@ -2,7 +2,6 @@ package com.twu.biblioteca;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -50,6 +49,7 @@ public class BibliotecaApp {
 
         return String.join(", ", yearList);
     }
+
     public static String checkOut() {
         System.out.println("please enter book name to check out");
         Scanner keyboard = new Scanner(System.in);
@@ -63,7 +63,7 @@ public class BibliotecaApp {
         return "Sorry, that book is not available";
     }
 
-        public static String getOptions() {
+    public static String getOptions() {
         System.out.println("please enter following numbers for different options" +
                 "\n1. Show list of books" +
                 "\n2. Show list of author" +
@@ -99,13 +99,15 @@ public class BibliotecaApp {
         System.out.println("please enter book name to return");
         Scanner keyboard = new Scanner(System.in);
         String input = keyboard.nextLine();
-        for (book book: inventoryForCheck) {
+        for (book book : inventoryForCheck) {
             if (input.equals(book.getName())) {
                 inventory.add(book);
+
                 return "Thank you for returning the book";
             }
 
         }
+
         return "That is not a valid book to return";
     }
 }
